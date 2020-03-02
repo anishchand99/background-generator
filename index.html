@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Background Generator</title>
+		<link rel = "stylesheet" type="text/css" href="./styles/style.css"/> 
+	</head>
+	<body id = "container">
+		<div class="visible" onclick="hideAll()">
+			Hide 
+		</div>
+		<div class="hide">
+			<div class="filter">
+				<select id = 'background-type' onchange="getBackgroundType()">
+					<option value='linear-gradient'>Linear-gradient</option>
+					<option value='single'>Single</option>
+					<option value='radial-gradient'>Radial-gradient</option>
+				</select>
+				<label for="color-count">Color Count:&nbsp;</label>
+				<input type="number" min='1' max= '3' value='3'  id = 'color-count' placeholder="  number of colors" onchange="getColorCount()">
+			</div>
+			<h1 class = "heading">BACKGROUND GENERATOR</h1>
+			<h5> SELECT COLOR </h5>
+			<div class = "buttons">
+				<input class= "color1" type="color" name = "color1" value = "#cc95c0"/>
+				<input class= "color2" type="color" name="color2" value = "#dbd4b4"/>
+				<input class= "color3" type="color" name="color3" value = "#7aa1d2"/>
+			</div>
+			<h2> CURRENT CSS BACKGROUND </h2>
+			<h3></h3>
+			<button class="random" type="button">Random</button>	
+		</div>
+		<script type="text/javascript" src="./script/script.js"></script>
+	</body>
+</html>
