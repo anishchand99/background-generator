@@ -32,14 +32,16 @@ const getColorCount = () => {
 			input.name = 'color' + colorCount;
 			input.value = '#cc95c0';
 			input.addEventListener("input", function(){
-				setGradient(backgroundType);
+				setGradient(backgroundType, color1.value, color2.value, color3.value);
 			});
 			buttons.appendChild(input);
 			//add event listeners to the colors
 			if(document.querySelector('.color1') !== null){
+				console.log('color1');
 				color1 = document.querySelector(".color1");
 			}
 			if(document.querySelector('.color2') !== null){
+				console.log('color2');
 				color2 = document.querySelector(".color2");
 			}	
 		} else if(currentColor < colorCount){
